@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #e2e7e5;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #2b6cb0, #4299e1);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 60px 80px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #555;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #3182ce;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 300px;
+    height: 400px;
+    margin-left: 100px;
+    object-fit: cover;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about h2 {
+    color: #2b6cb0;
+    margin-bottom: 10px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgb(165, 177, 187);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.323);
+}
+.card b {
+    color: #2b6cb0;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    color: #2b6cb0;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.portfolio-item p {
+    padding: 10px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #2b6cb0, #4299e1);
+    color: white;
+}
+
+/* RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Brand</h2>
+    <div class="nav-links">
+        <a href="#">Header</a>
+        <a href="#">Biodata</a>
+        <a href="#">Portfolio</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+        <a href="#about" class="btn">Pelajari Lebih Lanjut</a>
+    </div>
+
+    <div>
+        <img src="Image/foto_cv.png" alt="profile">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Me</h2>
+    <p>A brief introduction about myself</p>
+
+    <div class="about-grid">
+        <div class="card"><b>Full Name:</b> Nancy Jellyfish</div>
+        <div class="card"><b>Education:</b> S1 Pharmacy</div>
+        <div class="card"><b>Pekerjaan:</b> Programmer</div>
+        <div class="card"><b>Contact:</b> nadwiwota@gmail.com</div>
+        <div class="card"><b>Hobi:</b> Membaca, Coding</div>
+        <div class="card"><b>Alamat:</b> Jakarta</div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+    <h2>Portfolio</h2>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a">
+            <p>Proyek 1</p>
+            <p>Lomba Lari Maraton</p>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <p>Proyek 2</p>
+            <p>Pesona Pantai Sumba NTT</p>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            <p>Proyek 3</p>
+            <p>Referensi Meja Belajar</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Nancy_jellyfish. All rights reserved.
+</div>
+
+</body>
+</html>
